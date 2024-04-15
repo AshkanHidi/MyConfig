@@ -4,4 +4,4 @@
 //support-url: https://t.me/ircfspace
 //profile-web-page-url: https://ircf.space
 
-warp://auto#آی‌پی آلمان 🇩🇪 ⭐️&&detour=warp://auto#آی‌پی ایران 🇮🇷
+warp://auto#Germany IP 🇩🇪 ⭐️&&detour=warp://auto#IRAN IP 🇮🇷
