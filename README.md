@@ -4,4 +4,4 @@
 //support-url: https://t.me/ircfspace
 //profile-web-page-url: https://ircf.space
 
-warp://auto#🇩🇪 ⭐️&&detour=warp://auto#🇮🇷
+warp://auto#🇩🇪 &&detour=warp://auto#🇮🇷
