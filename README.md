@@ -3,4 +3,4 @@
 //subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=0
 //support-url: www.payvast.com
 //profile-web-page-url: https://www.payvast.com
-warp://auto#Germany ⭐️&&detour=warp://auto#IR&&detour=warp://auto#IR&&detour=warp://auto#IR
+warp://auto#IRAN-1&&detour=warp://auto#GERMANY-2
