@@ -1,16 +1,201 @@
-vless://c26763c2-cc9a-4ccf-9c6b-a0d59693ddad@cpanel.sibdoni.com:443?security=reality&sni=www.speedtest.net&fp=randomized&pbk=lUIo-b2DdbuJhu91aWS39i9KLClqCtbY_IMa0pbHYl8&sid=c3107bb39b358c2f&type=tcp&flow=xtls-rprx-vision&encryption=none#Irancell%20Reality
-
-vmess://eyJhZGQiOiAicGFuZWwuZWFzeS1zd2FwLm5ldCIsICJhaWQiOiAiMCIsICJob3N0IjogInd3dy50Z2p1Lm9yZyIsICJpZCI6ICJjMjY3NjNjMi1jYzlhLTRjY2YtOWM2Yi1hMGQ1OTY5M2RkYWQiLCAibmV0IjogIndzIiwgInBhdGgiOiAiL3Byb2ZpbGUvZ29sZF9tZWx0ZWRfd2hvbGVzYWxlIiwgInBvcnQiOiAiODAiLCAicHMiOiAiSXJhbmNlbGwgTmV3IC0gQGdvb2RwaWluZyIsICJzY3kiOiAiYXV0byIsICJzbmkiOiAiIiwgInRscyI6ICIiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiJ9
-
-vmess://eyJhZGQiOiAiaXIuc2liZG9uaS5jb20iLCAiYWlkIjogIjAiLCAiaG9zdCI6ICJ0d3ltaW1saWZ4X28tZy1nX2ctZy1nLWctZy1nLWctZy1nLS0wLXhuLWZnLWctZy1fLWctZy1nLWctZzFyLS5tb25pc29yLmluZm8iLCAiaWQiOiAiYzI2NzYzYzItY2M5YS00Y2NmLTljNmItYTBkNTk2OTNkZGFkIiwgIm5ldCI6ICJ3cyIsICJwYXRoIjogIi9ncmFwaHFsIiwgInBvcnQiOiAiMjA4MyIsICJwcyI6ICJWTUVTUyBJcmFuY2VsbCAyMDI0IC0gQGdvb2RwaWluZyIsICJzY3kiOiAiYXV0byIsICJzbmkiOiAidHd5bWltbGlmeF9vLWctZ19nLWctZy1nLWctZy1nLWctZy0tMC14bi1mZy1nLWctXy1nLWctZy1nLWcxci0ubW9uaXNvci5pbmZvIiwgInRscyI6ICJ0bHMiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiJ9
-
-vless://c26763c2-cc9a-4ccf-9c6b-a0d59693ddad@ir.sibdoni.com:443?security=tls&sni=holdp4o_o-g-g_g-g-g-g-g-g-g-g-g0-xn-fg-g-g-_-g-g-g-g-g1r-.karamoj.net&type=ws&path=/graphql&host=holdp4o_o-g-g_g-g-g-g-g-g-g-g-g0-xn-fg-g-g-_-g-g-g-g-g1r-.karamoj.net&encryption=none#VLESS-Irancell-2024
-
-vless://6b137d68-1ea4-450c-9673-0a0927411bb6@api.easy-swap.net:2083?security=tls&sni=cyqnnfwvmu_o-g-g_g-g-g-g-g-g-g-g-g0-xn-fg-g-g-_-g-g-g-g-g1r-.jamakoper.info&type=ws&path=/koral&fp=chrome&host=cyqnnfwvmu_o-g-g_g-g-g-g-g-g-g-g-g0-xn-fg-g-g-_-g-g-g-g-g1r-.jamakoper.info&encryption=none#ViP-1
-
-vmess://eyJhZGQiOiAiYXBpLmVhc3ktc3dhcC5uZXQiLCAiYWlkIjogIjAiLCAiaG9zdCI6ICJjeXFubmZ3dm11X28tZy1nX2ctZy1nLWctZy1nLWctZy1nLS0wLXhuLWZnLWctZy1fLWctZy1nLWctZzFyLS5qYW5lYmlkb25pLmNvbSIsICJpZCI6ICI2YjEzN2Q2OC0xZWE0LTQ1MGMtOTY3My0wYTA5Mjc0MTFiYjYiLCAibmV0IjogIndzIiwgInBhdGgiOiAiL2Rvd25sb2FkIiwgInBvcnQiOiAiMjA4MiIsICJwcyI6ICJWaVAgNSIsICJzY3kiOiAiYXV0byIsICJzbmkiOiAiIiwgInRscyI6ICIiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiJ9
-
-vmess://eyJhZGQiOiAibW9raC5lYXN5LXN3YXAubmV0IiwgImFpZCI6ICIwIiwgImhvc3QiOiAiYXBpNC50Z2p1Lm9yZyIsICJpZCI6ICI2YjEzN2Q2OC0xZWE0LTQ1MGMtOTY3My0wYTA5Mjc0MTFiYjYiLCAibmV0IjogIndzIiwgInBhdGgiOiAiL2Rvd25sb2FkIiwgInBvcnQiOiAiNDQzIiwgInBzIjogIlZpUCAyIC0gQGdvb2RwaWluZyIsICJzY3kiOiAiYXV0byIsICJzbmkiOiAiIiwgInRscyI6ICIiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiJ9
-
-vmess://eyJhZGQiOiAiaXJjLmVhc3ktc3dhcC5uZXQiLCAiYWlkIjogIjAiLCAiaG9zdCI6ICJhcGk0LnRnanUub3JnIiwgImlkIjogIjZiMTM3ZDY4LTFlYTQtNDUwYy05NjczLTBhMDkyNzQxMWJiNiIsICJuZXQiOiAid3MiLCAicGF0aCI6ICIvZG93bmxvYWQiLCAicG9ydCI6ICI4MCIsICJwcyI6ICJWaVAtQUxMIChJcmFuY2VsbC1SaWdodGVsKSIsICJzY3kiOiAiYXV0byIsICJzbmkiOiAiIiwgInRscyI6ICIiLCAidHlwZSI6ICJub25lIiwgInYiOiAiMiJ9
-
+{
+ "log": {
+ "level": "warn",
+ "output": "box.log",
+ "timestamp": true
+ },
+ "dns": {
+ "servers": [
+{
+"tag": "dns-remote",
+"address": "udp://1.1.1.1",
+"address_resolver": "dns-direct",
+"detour": "select"
+},
+{
+"tag": "dns-direct",
+"address": "1.1.1.1",
+"address_resolver": "dns-local",
+"detour": "direct"
+},
+{
+"tag": "dns-local",
+"address": "local",
+"detour": "direct"
+},
+{
+"tag": "dns-block",
+"address": "rcode://success"
+}
+],
+ "rules": [
+{
+"domain": "engage.cloudflareclient.com",
+"server": "dns-direct"
+},
+{
+"domain_suffix": ".ir",
+"geosite": "ir",
+"server": "dns-direct"
+},
+{
+"domain": "cp.cloudflare.com",
+"server": "dns-remote",
+"rewrite_ttl": 3000
+}
+],
+ "final": "dns-remote",
+ "independent_cache": true
+ },
+ "inbounds": [
+{
+"type": "tun",
+"tag": "tun-in",
+"mtu": 9000,
+"inet4_address": "172.19.0.1/28",
+"auto_route": true,
+"strict_route": true,
+"endpoint_independent_nat": true,
+"sniff": true,
+"sniff_override_destination": true
+},
+{
+"type": "mixed",
+"tag": "mixed-in",
+"listen": "0.0.0.0",
+"listen_port": 2334,
+"sniff": true,
+"sniff_override_destination": true
+},
+{
+"type": "direct",
+"tag": "dns-in",
+"listen": "0.0.0.0",
+"listen_port": 6440,
+"override_address": "1.1.1.1",
+"override_port": 53
+}
+],
+ "outbounds": [
+ {
+ "type": "selector",
+ "tag": "select",
+ "outbounds": [
+"auto",
+"u0",
+"u1"
+],
+ "default": "auto"
+ },
+ {
+ "type": "urltest",
+ "tag": "auto",
+ "outbounds": [
+"u0",
+"u1"
+],
+ "url": "http://cp.cloudflare.com/",
+ "interval": "10m0s"
+ },
+ {
+ "type": "wireguard",
+ "tag": "u0",
+ "local_address": [
+"172.16.0.2/32","2606:4700:110:86ed:83e4:4cb1:c7f8:2aef/128"
+],
+ "private_key": "YLLznV1dk/DMeSkrhXmvN+bdh/XXr1UZMp5iPXLgGUg=",
+ "server": "2606:4700:d0::22f9:50fc:f683:18e0",
+ "server_port": 859,
+ "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+ "reserved": [
+127,90,114
+],
+ "mtu": 1280,
+ "fake_packets": "8-15",
+ "fake_packets_size": "40-100",
+ "fake_packets_delay": "20-250"
+ },
+ {
+ "type": "wireguard",
+ "tag": "u1",
+ "detour": "u0",
+ "local_address": [
+"172.16.0.2/32","2606:4700:110:8c41:7cbc:b82d:1acd:4fd/128"
+],
+ "private_key": "OC8byGVfFaoLeBmYy0GSmbeeT9oQdo/PvJyw69CufWU=",
+ "server": "162.159.195.91",
+ "server_port": 903,
+ "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+ "reserved": [
+133,87,18
+],
+ "mtu": 1280,
+ "fake_packets": "8-15",
+ "fake_packets_size": "40-100",
+ "fake_packets_delay": "20-250"
+ },
+ {
+ "type": "dns",
+ "tag": "dns-out"
+ },
+ {
+ "type": "direct",
+ "tag": "direct"
+ },
+ {
+ "type": "direct",
+ "tag": "bypass"
+ },
+ {
+ "type": "block",
+ "tag": "block"
+ }
+ ],
+ "route": {
+ "geoip": {
+ "path": "geo-assets/sagernet-sing-geoip-geoip.db"
+ },
+ "geosite": {
+ "path": "geo-assets/sagernet-sing-geosite-geosite.db"
+ },
+ "rules": [
+{
+"inbound": "dns-in",
+"outbound": "dns-out"
+},
+{
+"port": 53,
+"outbound": "dns-out"
+},
+{
+"clash_mode": "Direct",
+"outbound": "direct"
+},
+{
+"clash_mode": "Global",
+"outbound": "select"
+},
+{
+"geoip": "private",
+"outbound": "bypass"
+},
+{
+"domain_suffix": ".ir",
+"geosite": "ir",
+"geoip": "ir",
+"outbound": "bypass"
+}
+],
+ "auto_detect_interface": true,
+ "override_android_vpn": true
+ },
+ "experimental": {
+ "cache_file": {
+ "enabled": true,
+ "path": "clash.db"
+ },
+ "clash_api": {
+ "external_controller": "127.0.0.1:6756"
+ }
+ }
+}
