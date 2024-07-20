@@ -1,201 +1,194 @@
 {
-  "log": {
-    "level": "warn",
-    "output": "box.log",
-    "timestamp": true
-  },
   "dns": {
+    "hosts": {
+
+"dns.adguard-dns.com": [
+
+"176.103.130.130",
+"176.103.130.131",
+"176.103.130.132",
+"176.103.130.134",
+"176.103.130.136",
+"176.103.130.137",
+"94.140.14.14",
+"94.140.15.15",
+"94.140.14.15",
+"94.140.15.16",
+"94.140.14.140",
+"94.140.14.141"
+
+]
+   
+    },
     "servers": [
+
       {
-        "tag": "dns-remote",
-        "address": "udp://1.1.1.1",
-        "address_resolver": "dns-direct",
-        "detour": "select"
-      },
-      {
-        "tag": "dns-direct",
-        "address": "1.1.1.1",
-        "address_resolver": "dns-local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-local",
-        "address": "local",
-        "detour": "direct"
-      },
-      {
-        "tag": "dns-block",
-        "address": "rcode://success"
+        "address": "https://dns.adguard-dns.com/dns-query"
+      
+        
       }
-    ],
-    "rules": [
-      {
-        "domain": "engage.cloudflareclient.com",
-        "server": "dns-direct"
-      },
-      {
-        "domain_suffix": ".ir",
-        "geosite": "ir",
-        "server": "dns-direct"
-      },
-      {
-        "domain": "cp.cloudflare.com",
-        "server": "dns-remote",
-        "rewrite_ttl": 3000
-      }
-    ],
-    "final": "dns-remote",
-    "independent_cache": true
+      
+      
+    ]
   },
   "inbounds": [
     {
-      "type": "tun",
-      "tag": "tun-in",
-      "mtu": 9000,
-      "inet4_address": "172.19.0.1/28",
-      "auto_route": true,
-      "strict_route": true,
-      "endpoint_independent_nat": true,
-      "sniff": true,
-      "sniff_override_destination": true
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "fakedns"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
     },
     {
-      "type": "mixed",
-      "tag": "mixed-in",
-      "listen": "0.0.0.0",
-      "listen_port": 2334,
-      "sniff": true,
-      "sniff_override_destination": true
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
     },
     {
-      "type": "direct",
-      "tag": "dns-in",
-      "listen": "0.0.0.0",
-      "listen_port": 6440,
-      "override_address": "1.1.1.1",
-      "override_port": 53
+      "listen": "127.0.0.1",
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "1.1.1.1",
+        "network": "tcp,udp",
+        "port": 53
+      },
+      "tag": "dns-in"
     }
   ],
+  "log": {
+    "loglevel": "warning"
+  },
   "outbounds": [
     {
-      "type": "selector",
-      "tag": "select",
-      "outbounds": [
-        "auto",
-        "u0",
-        "u1"
-      ],
-      "default": "auto"
+      "protocol": "wireguard",
+      "settings": {
+        "secretKey": "MJQlQQ1+GlHB0H/eqDJkKNEg5daDb9SgNf92fwc1qmo=",
+        "address": [
+          "172.16.0.2/32",
+          "2606:4700:110:8dfd:c56a:6f89:44dc:11a1/128"
+        ],
+        "peers": [
+          {
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "allowedIPs": [
+              "0.0.0.0/0",
+              "::/0"
+            ],
+            "keepAlive": 1,
+            "endpoint": "188.114.96.185:939"
+          }
+        ],
+        "reserved": [
+          134,26,134
+        ],
+        "mtu": 1280
+      },
+      "tag": "chain"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "u0",
-        "u1"
-      ],
-      "url": "http://cp.cloudflare.com/",
-      "interval": "10m0s"
+      "protocol": "wireguard",
+      "settings": {
+        "secretKey": "oKGXW8p/HnQ5MwPU0wHLN804fvvYI4o5GtSou4Mr30k=",
+        "address": [
+          "172.16.0.2/32",
+          "2606:4700:110:81ad:51b4:1efe:bd02:5e3b/128"
+        ],
+        "peers": [
+          {
+            "publicKey": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
+            "allowedIPs": [
+              "0.0.0.0/0",
+              "::/0"
+            ],
+            "keepAlive": 1,
+            "endpoint": "188.114.96.200:1701"
+          }
+        ],
+        "reserved": [
+          14,87,148
+        ],
+        "mtu": 1280
+      },
+      "proxySettings": {
+        "tag": "chain"
+      },
+      "tag": "proxy"
     },
     {
-      "type": "wireguard",
-      "tag": "u0",
-      "local_address": [
-        "172.16.0.2/32","2606:4700:110:86ed:83e4:4cb1:c7f8:2aef/128"
-      ],
-      "private_key": "YLLznV1dk/DMeSkrhXmvN+bdh/XXr1UZMp5iPXLgGUg=",
-      "server": "2606:4700:d0::c50b:6e87:7e10:e5b7",
-      "server_port": 943,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [
-        127,90,114
-      ],
-      "mtu": 1280,
-        "fake_packets": "8-15",
-      "fake_packets_size": "40-100",
-      "fake_packets_delay": "20-250"
+      "tag": "fragment",
+      "protocol": "freedom",
+    
+      "settings": {
+        "fragment": {
+          "packets": "tlshello",
+          "length": "10-20",
+          "interval": "10-20"
+        }
+      }
     },
     {
-      "type": "wireguard",
-      "tag": "u1",
-      "detour": "u0",
-      "local_address": [
-        "172.16.0.2/32","2606:4700:110:8c41:7cbc:b82d:1acd:4fd/128"
-      ],
-      "private_key": "OC8byGVfFaoLeBmYy0GSmbeeT9oQdo/PvJyw69CufWU=",
-      "server": "162.159.192.128",
-      "server_port": 945,
-      "peer_public_key": "bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=",
-      "reserved": [
-       133,87,18
-      ],
-      "mtu": 1280,
-        "fake_packets": "8-15",
-      "fake_packets_size": "40-100",
-      "fake_packets_delay": "20-250"
+      "tag": "fragment2",
+      "protocol": "freedom",
+      "settings": {
+        "fragment": {
+          "packets": "1-1",
+          "length": "3-5",
+          "interval": "5"
+        }
+      }
     },
     {
-      "type": "dns",
+      "protocol": "dns",
+       "sockopt": {
+          "dialerProxy": "fragment"
+      
+        },
       "tag": "dns-out"
     },
     {
-      "type": "direct",
-      "tag": "direct"
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {}
     },
     {
-      "type": "direct",
-      "tag": "bypass"
-    },
-    {
-      "type": "block",
-      "tag": "block"
+      "tag": "block",
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      }
     }
   ],
-  "route": {
-    "geoip": {
-      "path": "geo-assets/sagernet-sing-geoip-geoip.db"
-    },
-    "geosite": {
-      "path": "geo-assets/sagernet-sing-geosite-geosite.db"
-    },
+  "routing": {
+    "domainStrategy": "AsIs",
+    "domainMatcher": "hybrid",
     "rules": [
+      
       {
-        "inbound": "dns-in",
-        "outbound": "dns-out"
-      },
-      {
-        "port": 53,
-        "outbound": "dns-out"
-      },
-      {
-        "clash_mode": "Direct",
-        "outbound": "direct"
-      },
-      {
-        "clash_mode": "Global",
-        "outbound": "select"
-      },
-      {
-        "geoip": "private",
-        "outbound": "bypass"
-      },
-      {
-        "domain_suffix": ".ir",
-        "geosite": "ir",
-        "geoip": "ir",
-        "outbound": "bypass"
+        "inboundTag": [
+          "socks",
+          "http",
+         "dns-in"
+        ],
+        "outboundTag": "proxy",
+        "type": "field"
       }
-    ],
-    "auto_detect_interface": true,
-    "override_android_vpn": true
-  },
-  "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "clash.db"
-    },
-    "clash_api": {
-      "external_controller": "127.0.0.1:6756"
-    }
+    ]
   }
 }
