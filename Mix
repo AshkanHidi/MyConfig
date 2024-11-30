@@ -1,0 +1,3 @@
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.visa.com.sg:8880?path=%2F%3Fed%3D2560&security=none&encryption=none&host=sayhi.ashkanhidi.workers.dev&type=ws#Sayhi
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.visa.com.sg:8443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=saybye.pages.dev&fp=random&type=ws&sni=saybye.pages.dev#Saybye
+trojan://trojan@www.visa.com.sg:8443?path=%2F%3Fed%3D2560&security=tls&host=trj.ashkanhidi.ir&fp=random&type=ws&sni=trj.ashkanhidi.ir#Trojan
