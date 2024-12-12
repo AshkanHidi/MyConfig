@@ -3,3 +3,4 @@ trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=hometown-5mz.page
 trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=yourglory.pages.dev&sni=yourglory.pages.dev&fp=random&path=%2F%3Fed%3D2560#yourglory.pages.dev
 trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=trojan-bxn.pages.dev&sni=trojan-bxn.pages.dev&fp=random&path=%2F%3Fed%3D2560#trojan-bxn.pages.dev
 trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=karen-dnn.pages.dev&sni=karen-dnn.pages.dev&fp=random&path=%2F%3Fed%3D2560#karen-dnn.pages.dev
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.visa.com.sg:8443?encryption=none&security=tls&type=ws&host=e40f6545.lina-3u3.pages.dev&sni=e40f6545.lina-3u3.pages.dev&fp=random&path=%2F%3Fed%3D2560#e40f6545.lina-3u3.pages.dev
