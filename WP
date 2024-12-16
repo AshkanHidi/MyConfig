@@ -5,3 +5,4 @@ trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=trojan-bxn.pages.
 trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=karen-dnn.pages.dev&sni=karen-dnn.pages.dev&fp=random&path=%2F%3Fed%3D2560#karen-dnn.pages.dev
 vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.visa.com.sg:8443?encryption=none&security=tls&type=ws&host=lina-3u3.pages.dev&sni=lina-3u3.pages.dev&fp=random&path=%2F%3Fed%3D2560#lina-3u3.pages.dev
 trojan://trojan@www.visa.com.sg:8443?security=tls&type=ws&host=hdbxud.pages.dev&sni=hdbxud.pages.dev&fp=random&path=%2F%3Fed%3D2560#hdbxud.pages.dev
+vless://86c50e3a-5b87-49dd-bd20-03c7f2735e40@www.visa.com.sg:8880?encryption=none&security=none&type=ws&host=curly.voveyol986.workers.dev&path=%2F%3Fed%3D2560#curly.voveyol986.workers.dev
