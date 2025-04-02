@@ -1,0 +1,17 @@
+[Interface]
+Address = 100.80.234.177/32
+DNS = 10.255.255.2
+Jc = 4
+Jmin = 40
+Jmax = 70
+H1 = 1
+H2 = 2
+H3 = 3
+H4 = 4
+PrivateKey = cIq+3tcHVT7gRMl4kIv0WE68ERiTmDtA7rhyHhLJ/mg=
+
+[Peer]
+AllowedIPs = 0.0.0.0/0
+Endpoint = 103.107.198.228:443
+PreSharedKey = N/gfMZSjvP8mbXfVP2hnD5CX8BkGvOyheJ67mCpD+QQ=
+PublicKey = tJa6iPx6mpOktn5KoalMslWcpg6pRUdVx3bKDi3wtDg=
