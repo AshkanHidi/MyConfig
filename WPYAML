@@ -1,0 +1,311 @@
+باشه، این هم فایل YAML برای Clash Meta و Clash Verge بر اساس لینک‌هایی که ارائه دادید.
+
+نکات مهم:
+
+نام پراکسی‌ها: نام پراکسی‌ها از قسمت بعد از # در URL ها گرفته شده است.
+
+client-fingerprint: مقدار fp=random به client-fingerprint: random در کانفیگ تبدیل شده است که برای TLS Fingerprint Spoofing استفاده می‌شود.
+
+path: مقدار path=%2F%3Fed%3D2560 به صورت path: "/?ed=2560" (URL-decoded) درآمده است.
+
+گروه‌های پراکسی: چند گروه پراکسی پیش‌فرض برای انتخاب دستی، خودکار (بر اساس تست سرعت) و همچنین دسترسی مستقیم و مسدود کردن اضافه شده است.
+
+قوانین (Rules): چند قانون ساده برای شروع اضافه شده است. شما می‌توانید این بخش را مطابق نیاز خود ویرایش کنید.
+
+DNS: سرورهای DNS عمومی اضافه شده‌اند.
+
+security=none: برای سرورهایی که security=none دارند، tls: false تنظیم شده و sni و client-fingerprint حذف شده‌اند.
+
+# Ports for HTTP and SOCKS5 proxy
+port: 7890
+socks-port: 7891
+# RESTful API for Clash Dashboard
+external-controller: '0.0.0.0:9090'
+# Allow connections from other devices on the same LAN
+allow-lan: true
+# Initial mode: rule, global, direct
+mode: rule
+log-level: info
+
+# DNS settings
+dns:
+  enable: true
+  listen: 0.0.0.0:5353
+  ipv6: false # Set to true if you use IPv6
+  enhanced-mode: redir-host # or fake-ip
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver:
+    - 223.5.5.5
+    - 114.114.114.114
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  fallback:
+    - tls://1.0.0.1:853 # Cloudflare
+    - tls://8.8.4.4:853 # Google
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN # GeoIP code for your region if you want to use fallback for specific regions
+    ipcidr:
+      - 240.0.0.0/4
+
+# List of proxies
+proxies:
+  - name: hometown-5mz.pages.dev
+    type: trojan
+    server: www.visa.com.sg
+    port: 8443
+    password: trojan
+    network: ws
+    udp: true
+    sni: hometown-5mz.pages.dev
+    client-fingerprint: random
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: hometown-5mz.pages.dev
+    tls: true
+
+  - name: yourglory.pages.dev
+    type: trojan
+    server: www.visa.com.sg
+    port: 8443
+    password: trojan
+    network: ws
+    udp: true
+    sni: yourglory.pages.dev
+    client-fingerprint: random
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: yourglory.pages.dev
+    tls: true
+
+  - name: karen-dnn.pages.dev
+    type: trojan
+    server: www.visa.com.sg
+    port: 8443
+    password: trojan
+    network: ws
+    udp: true
+    sni: karen-dnn.pages.dev
+    client-fingerprint: random
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: karen-dnn.pages.dev
+    tls: true
+
+  - name: lina-3u3.pages.dev
+    type: vless
+    server: www.visa.com.sg
+    port: 8443
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    cipher: auto # encryption=none typically means auto for vless
+    network: ws
+    udp: true
+    tls: true
+    sni: lina-3u3.pages.dev
+    client-fingerprint: random
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: lina-3u3.pages.dev
+
+  - name: hdbxud.pages.dev
+    type: trojan
+    server: www.visa.com.sg
+    port: 8443
+    password: trojan
+    network: ws
+    udp: true
+    sni: hdbxud.pages.dev
+    client-fingerprint: random
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: hdbxud.pages.dev
+    tls: true
+
+  - name: curly.voveyol986.workers.dev
+    type: vless
+    server: www.visa.com.sg
+    port: 8880
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    cipher: auto # encryption=none
+    network: ws
+    udp: true
+    tls: false # security=none
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: curly.voveyol986.workers.dev
+
+  - name: fancy.yelikaw771.workers.dev
+    type: vless
+    server: www.visa.com.sg
+    port: 8880
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    cipher: auto # encryption=none
+    network: ws
+    udp: true
+    tls: false # security=none
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: fancy.yelikaw771.workers.dev
+
+  - name: waterfall.fimoged751.workers.dev
+    type: vless
+    server: www.visa.com.sg
+    port: 8880
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    cipher: auto # encryption=none
+    network: ws
+    udp: true
+    tls: false # security=none
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: waterfall.fimoged751.workers.dev
+
+  - name: icy-moon-6455.vimesi3913.workers.dev
+    type: vless
+    server: www.visa.com.sg
+    port: 8880
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    cipher: auto # encryption=none
+    network: ws
+    udp: true
+    tls: false # security=none
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: icy-moon-6455.vimesi3913.workers.dev
+
+  - name: white-star-3555.motok43425.workers.dev
+    type: vless
+    server: www.visa.com.sg
+    port: 8880
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    cipher: auto # encryption=none
+    network: ws
+    udp: true
+    tls: false # security=none
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: white-star-3555.motok43425.workers.dev
+
+  - name: 14ordibehesht.pages.dev
+    type: vless
+    server: www.visa.com.sg
+    port: 8443
+    uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40
+    cipher: auto # encryption=none
+    network: ws
+    udp: true
+    tls: true
+    sni: 14ordibehesht.pages.dev
+    client-fingerprint: random
+    ws-opts:
+      path: "/?ed=2560"
+      headers:
+        Host: 14ordibehesht.pages.dev
+
+# Proxy groups
+proxy-groups:
+  - name: "🚀 PROXY" # Master group to select other groups or proxies
+    type: select
+    proxies:
+      - "🏃 Auto-Select"
+      - "手动选择 (Manual)"
+      - DIRECT
+      # Add individual proxies if you want to select them directly
+      - hometown-5mz.pages.dev
+      - yourglory.pages.dev
+      - karen-dnn.pages.dev
+      - lina-3u3.pages.dev
+      - hdbxud.pages.dev
+      - curly.voveyol986.workers.dev
+      - fancy.yelikaw771.workers.dev
+      - waterfall.fimoged751.workers.dev
+      - icy-moon-6455.vimesi3913.workers.dev
+      - white-star-3555.motok43425.workers.dev
+      - 14ordibehesht.pages.dev
+
+  - name: "🏃 Auto-Select"
+    type: url-test
+    url: http://www.gstatic.com/generate_204 # URL for testing latency
+    interval: 300 # Test interval in seconds
+    tolerance: 50 # ms, proxies with latency difference less than this are considered equal
+    proxies:
+      # List all your proxies here that you want to be part of auto-selection
+      - hometown-5mz.pages.dev
+      - yourglory.pages.dev
+      - karen-dnn.pages.dev
+      - lina-3u3.pages.dev
+      - hdbxud.pages.dev
+      - curly.voveyol986.workers.dev
+      - fancy.yelikaw771.workers.dev
+      - waterfall.fimoged751.workers.dev
+      - icy-moon-6455.vimesi3913.workers.dev
+      - white-star-3555.motok43425.workers.dev
+      - 14ordibehesht.pages.dev
+
+  - name: "手动选择 (Manual)"
+    type: select
+    proxies:
+      # List all your proxies here for manual selection
+      - hometown-5mz.pages.dev
+      - yourglory.pages.dev
+      - karen-dnn.pages.dev
+      - lina-3u3.pages.dev
+      - hdbxud.pages.dev
+      - curly.voveyol986.workers.dev
+      - fancy.yelikaw771.workers.dev
+      - waterfall.fimoged751.workers.dev
+      - icy-moon-6455.vimesi3913.workers.dev
+      - white-star-3555.motok43425.workers.dev
+      - 14ordibehesht.pages.dev
+      - DIRECT
+      - REJECT
+
+# Rules
+rules:
+  # Common ad domains (example, you can use a full adblock list)
+  - DOMAIN-KEYWORD,adtrack,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+
+  # LAN IP addresses
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT # CGNAT addresses
+
+  # Sites that should go DIRECT (e.g., local services, banking)
+  - DOMAIN-SUFFIX,internal,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  # - DOMAIN-SUFFIX,examplebank.com,DIRECT
+
+  # GeoIP rule for your country (e.g., IR for Iran)
+  # You might need to download the GeoIP database (Country.mmdb)
+  - GEOIP,IR,DIRECT # ترافیک داخلی ایران مستقیم
+
+  # Final rule: everything else goes through the selected PROXY group
+  - MATCH,🚀 PROXY
+
+
+نحوه استفاده:
+
+محتوای بالا را در یک فایل با پسوند .yaml (مثلاً config.yaml) ذخیره کنید.
+
+این فایل را در نرم‌افزار Clash Meta یا Clash Verge خود وارد (Import) کنید.
+
+در بخش "Proxy Groups"، گروه 🚀 PROXY را انتخاب کنید و سپس از داخل آن، حالت مورد نظر خود (🏃 Auto-Select، 手动选择 (Manual) یا یکی از سرورهای تکی) را برگزینید.
+
+امیدوارم این کانفیگ برای شما مفید باشد!
